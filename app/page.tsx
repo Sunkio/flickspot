@@ -1,4 +1,3 @@
-import { TrendingToday } from '@/app/interfaces';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -16,8 +15,9 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data: TrendingToday = await getData();
-  // console.log(data);
+  const data: TrendingToday[] = await getData();
+
+  console.log(data);
   return (
     <main className='bg-white py-6 sm:py-8 lg:py-22'>
       <div className='mx-auto max-w-screen-2xl px-4 md:px-8'>
