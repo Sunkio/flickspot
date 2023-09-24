@@ -4,7 +4,7 @@ interface TrendingToday {
     poster_path: string;
     title: string;
     overview: string;
-  };
+  }[];
 }
 
 interface Movie {

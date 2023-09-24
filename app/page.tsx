@@ -15,7 +15,7 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data: TrendingToday[] = await getData();
+  const data: TrendingToday = await getData();
 
   console.log(data);
   return (
@@ -25,8 +25,8 @@ export default async function Home() {
           <h2 className='mb4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl'>Top Trending Movies</h2>
         </div>
         <div className='grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8'>
-          {data.results.map((movie) => (
-            <div className='flex flex-col overflow-hidden rounded-lg border bg-white'>
+          {data.results.map((movie : any) => (
+            <div key={movie.id} className='flex flex-col overflow-hidden rounded-lg border active:border-amber-600 bg-white'>
               <Link
                 href={`/movie/${movie.id}`}
                 className='group relative block h-48 overflow-hidden bg-gray-100
