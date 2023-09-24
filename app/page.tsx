@@ -43,7 +43,7 @@ export default async function Home() {
                 <h2 className='mb-2 text-lg font-semibold text-gray-800'>
                   <Link
                     href={`/movie/${movie.id}`}
-                    className='transition duration-100 hover:text-teal-500 active:text-teal-600'
+                    className='transition duration-100 hover:text-amber-600 active:text-amber-700'
                   >
                     {movie.title}
                   </Link>

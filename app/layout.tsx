@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className="px-10 pt-5">
          <Link prefetch href="/">
-           Flick<span className="text-teal-500">Spot</span>
+           Flick<span className="text-amber-600">Spot</span>
          </Link>
         </nav>
         {children}
