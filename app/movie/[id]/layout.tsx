@@ -47,7 +47,7 @@ const Movie = async ({ params, children }: { params: { id: string }; children: R
             <span className='underline'>Release Date:</span> {data.release_date}
           </p>
         </div>
-        <div className='w-1/2 font-medium bg-gray-100'>{children}</div>
+        <div className='w-1/2 font-medium'>{children}</div>
       </div>
     </main>
   );
