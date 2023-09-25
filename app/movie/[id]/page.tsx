@@ -25,7 +25,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
   const commentData = await getCommentData(params.id);
   return (
-    <main className='min-h-screen p-10'>
+    <main className='min-h-screen p-10 mt-7'>
       <div className='h-[40vh] relative'>
         <Image
           src={`https://image.tmdb.org/t/p/original/${movieData.backdrop_path}`}
