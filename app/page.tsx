@@ -28,31 +28,25 @@ export default async function Home() {
           {data.results.map((movie: any) => (
             <div
               key={movie.id}
-              className='flex flex-col overflow-hidden rounded-lg border active:border-amber-600 bg-white'
+              className='flex flex-col overflow-hidden rounded-lg border active:border-amber-600 click-3d click-3d:active bg-white'
             >
-              <Link
-                href={`/movie/${movie.id}`}
-                className='group relative block h-48 overflow-hidden bg-gray-100
+              <Link href={`/movie/${movie.id}`}>
+                <div
+                  className='group relative block h-48 overflow-hidden bg-gray-100
                        md:h-64'
-              >
-                <Image
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  width={500}
-                  height={'500'}
-                  alt='movie banner image'
-                />
+                >
+                  <Image
+                    src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                    width={500}
+                    height={'500'}
+                    alt='movie banner image'
+                  />
+                </div>
+                <div className='flex flex-1 flex-col p-4 sm:p-6'>
+                  <h2 className='mb-2 text-lg font-semibold text-gray-800 hover:text-amber-600'>{movie.title}</h2>
+                  <p className='text-gray-500 line-clamp-3'>{movie.overview}</p>
+                </div>
               </Link>
-              <div className='flex flex-1 flex-col p-4 sm:p-6'>
-                <h2 className='mb-2 text-lg font-semibold text-gray-800'>
-                  <Link
-                    href={`/movie/${movie.id}`}
-                    className='transition duration-100 hover:text-amber-600 active:text-amber-700'
-                  >
-                    {movie.title}
-                  </Link>
-                </h2>
-                <p className='text-gray-500 line-clamp-3'>{movie.overview}</p>
-              </div>
             </div>
           ))}
         </div>

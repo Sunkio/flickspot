@@ -9,7 +9,7 @@ const SubmitButton = () => {
     <button
       type='submit'
       disabled={pending}
-      className='bg-amber-600 active:bg-amber-700 px-4 py-2 rounded-lg text-white'
+      className='bg-amber-600 active:bg-amber-700 click-3d click-3d:active px-4 py-2 rounded-lg text-white'
     >
       {pending ? <>loading...</> : <>Publish</>}
     </button>

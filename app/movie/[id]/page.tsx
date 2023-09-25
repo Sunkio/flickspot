@@ -1,7 +1,7 @@
 import { db } from '@/app/db';
-import SubmitButton from '@/components/SubmitButton';
 import Image from 'next/image';
 import Link from 'next/link';
+import SubmitButton from '@/components/SubmitButton';
 import { getMovieData } from '@/lib/getMovieData';
 import { postData } from '@/lib/postData';
 

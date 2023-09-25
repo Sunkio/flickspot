@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+const plugin = require('tailwindcss/plugin');
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,6 +16,20 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }: any) {
+      const newUtilities = {
+        '.click-3d': {
+          transition: 'transform 0.3s',
+          'transform-style': 'preserve-3d',
+        },
+        '.click-3d:active': {
+          transform: 'translateY(2px) scale(0.98)',
+        },
+      };
+
+      addUtilities(newUtilities, ['active']);
+    }),
+  ],
 };
 export default config;
