@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'FlickSpot',
-  description: 'Find out about the latest movies',
+  description: 'Discover the Latest Blockbusters and Share Your Thoughts!',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
