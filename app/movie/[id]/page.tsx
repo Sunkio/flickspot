@@ -39,7 +39,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <div className='w-1/2 font-medium'>
           <h2>
             <span className='underline'>Homepage:</span>{' '}
-            <Link href={movieData.homepage} target='_blank'>
+            <Link href={movieData.homepage} target='_blank' className="hover:text-amber-600">
               Link
             </Link>
           </h2>
