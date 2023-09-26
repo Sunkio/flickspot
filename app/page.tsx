@@ -40,6 +40,7 @@ export default async function Home() {
                     width={500}
                     height={'500'}
                     alt='movie banner image'
+                    className="transition duration-200 ease-in-out group-hover:scale-110"
                   />
                 </div>
                 <div className='flex flex-1 flex-col p-4 sm:p-6'>
